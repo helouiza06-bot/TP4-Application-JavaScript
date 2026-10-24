@@ -1,0 +1,100 @@
+/* ==========================================================================
+   TechMarket Logistics - Styles Personnalisés (TP4)
+   ========================================================================== */
+
+/* 1. Configuration Générale & Variables CSS */
+:root {
+  --primary-color: #0d6efd;
+  --bg-light: #f8f9fa;
+  --transition-speed: 0.2s;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: #212529;
+}
+
+/* 2. Barre de Navigation */
+.navbar {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* 3. Cartes d'Indicateurs (KPIs) */
+.card {
+  border-radius: 8px;
+  transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
+}
+
+/* Effet au survol des cartes KPI */
+.row .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 4. Zone des Filtres & Recherche */
+.form-control:focus, 
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* 5. Tableau des Commandes */
+.table {
+  vertical-align: middle;
+}
+
+.table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.03);
+}
+
+/* Badges de Statut */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  font-size: 0.8rem;
+}
+
+/* 6. Boutons d'Action */
+.btn-outline-primary {
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-outline-primary:hover {
+  transform: scale(1.05);
+}
+
+/* 7. Modal de Détails */
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  font-weight: 600;
+  color: #212529;
+}
+
+/* 8. Responsive & Ajustements Mobile */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 0.9rem;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMarket - Back-Office Logistique</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">📦 TechMarket Logistics</span>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Zone de Gestion des Erreurs -->
+    <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
+
+    <!-- 1. Zone des Indicateurs (KPIs) -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <div class="card text-white bg-primary shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Total Clients</h6>
+            <h2 id="kpi-customers" class="fw-bold">0</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-white bg-info shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Total Produits</h6>
+            <h2 id="kpi-products" class="fw-bold">0</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-white bg-warning shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Total Commandes</h6>
+            <h2 id="kpi-orders" class="fw-bold">0</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-white bg-success shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Chiffre d'Affaires</h6>
+            <h2 id="kpi-revenue" class="fw-bold">0 MAD</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Zone de Recherche et Filtres -->
+    <div class="card p-3 mb-4 shadow-sm">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label font-weight-bold">Recherche par client</label>
+          <input type="text" id="search-customer" class="form-control" placeholder="Nom du client...">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label font-weight-bold">Statut de commande</label>
+          <select id="filter-status" class="form-select">
+            <option value="">Tous les statuts</option>
+            <option value="Livree">Livree</option>
+            <option value="En attente">En attente</option>
+            <option value="Annulee">Annulee</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label font-weight-bold">Catégorie de produit</label>
+          <select id="filter-category" class="form-select">
+            <option value="">Toutes les catégories</option>
+            <option value="Informatique">Informatique</option>
+            <option value="Accessoires">Accessoires</option>
+            <option value="Bureautique">Bureautique</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Tableau des Commandes -->
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title mb-3">Liste des Commandes</h5>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>ID</th>
+                <th>Client</th>
+                <th>Date</th>
+                <th>Statut</th>
+                <th>Montant Total</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="orders-table-body">
+              <!-- Rempli dynamiquement par JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 4. Modal Bootstrap pour le Détail de la Commande -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">Détail de la Commande</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Injecté par JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle (nécessaire pour faire fonctionner les Modals) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Principal (Module ES6) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

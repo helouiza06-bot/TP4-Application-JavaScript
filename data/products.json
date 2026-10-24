@@ -1,0 +1,49 @@
+[
+  { "id": 10,
+    "name": "Laptop Pro 15", 
+   "category": "Informatique",
+   "price": 8500,
+   "stock": 8 },
+
+  { "id": 11,
+    "name": "Souris Sans Fil",
+    "category": "Accessoires",
+    "price": 180,
+    "stock": 25 },
+
+  { "id": 12,
+    "name": "Clavier Mécanique",
+    "category": "Accessoires",
+    "price": 450,
+    "stock": 15 },
+
+  { "id": 13,
+    "name": "Écran 27 Pouces 4K",
+    "category": "Informatique",
+    "price": 3200,
+    "stock": 5 },
+
+  { "id": 14,
+    "name": "Imprimante Laser",
+    "category": "Bureautique",
+    "price": 2100,
+    "stock": 4 },
+
+  { "id": 15,
+    "name": "Fauteuil Ergonomique",
+    "category": "Bureautique",
+    "price": 1700,
+    "stock": 10 },
+
+  { "id": 16,
+    "name": "Disque Dur Externe 2TB",
+    "category": "Informatique",
+    "price": 900,
+    "stock": 20 },
+
+  { "id": 17,
+    "name": "Webcam HD",
+    "category": "Accessoires",
+    "price": 350,
+    "stock": 12 }
+]

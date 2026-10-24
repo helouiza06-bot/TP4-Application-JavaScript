@@ -1,0 +1,36 @@
+[
+  { "id": 1,
+   "name": "Atlas Digital SARL",
+    "city": "Marrakech",
+     "active": true },
+
+
+  { "id": 2,
+    "name": "Tech Academy",
+    "city": "Casablanca",
+    "active": true },
+
+
+  { "id": 3,
+    "name": "Nadia Rahmani",
+    "city": "Marrakech",
+    "active": true },
+
+
+  { "id": 4,
+   "name": "Kech Innov",
+   "city": "Marrakech",
+   "active": false },
+
+
+  { "id": 5,
+    "name": "Maghrib Soft",
+    "city": "Rabat",
+    "active": true },
+
+
+  { "id": 6,
+    "name": "Oasis Media",
+    "city": "Agadir",
+    "active": true }
+]
